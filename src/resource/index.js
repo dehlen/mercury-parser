@@ -47,7 +47,7 @@ const Resource = {
     if (
       !contentType.includes('html') &&
       !contentType.includes('text') &&
-      !contentType.isEmpty()
+      !contentType.length === 0
     ) {
       throw new Error('Content does not appear to be text.');
     }
