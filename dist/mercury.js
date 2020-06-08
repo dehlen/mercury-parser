@@ -6071,6 +6071,13 @@ var BlogsAbsoluteComExtractor = {
   }
 };
 
+var InessentialExtractor = {
+  domain: 'inessential.com',
+  title: {
+    selectors: ['.post h1']
+  }
+};
+
 
 
 var CustomExtractors = /*#__PURE__*/Object.freeze({
@@ -6216,7 +6223,8 @@ var CustomExtractors = /*#__PURE__*/Object.freeze({
   PinegrosbiikArtBlogExtractor: PinegrosbiikArtBlogExtractor,
   GooGlExtractor: GooGlExtractor,
   FellowproductsComExtractor: FellowproductsComExtractor,
-  BlogsAbsoluteComExtractor: BlogsAbsoluteComExtractor
+  BlogsAbsoluteComExtractor: BlogsAbsoluteComExtractor,
+  InessentialExtractor: InessentialExtractor
 });
 
 var Extractors = _Object$keys(CustomExtractors).reduce(function (acc, key) {
