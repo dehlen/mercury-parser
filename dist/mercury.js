@@ -1653,7 +1653,7 @@ var Resource = {
         contentType = _response$headers$con === void 0 ? '' : _response$headers$con; // TODO: Implement is_text function from
     // https://github.com/ReadabilityHoldings/readability/blob/8dc89613241d04741ebd42fa9fa7df1b1d746303/readability/utils/text.py#L57
 
-    if (!contentType.includes('html') && !contentType.includes('text')) {
+    if (!contentType.includes('html') && !contentType.includes('text') && !contentType.isEmpty()) {
       throw new Error('Content does not appear to be text.');
     }
 
@@ -6071,13 +6071,6 @@ var BlogsAbsoluteComExtractor = {
   }
 };
 
-var InessentialExtractor = {
-  domain: 'inessential.com',
-  title: {
-    selectors: ['.post h1']
-  }
-};
-
 
 
 var CustomExtractors = /*#__PURE__*/Object.freeze({
@@ -6223,8 +6216,7 @@ var CustomExtractors = /*#__PURE__*/Object.freeze({
   PinegrosbiikArtBlogExtractor: PinegrosbiikArtBlogExtractor,
   GooGlExtractor: GooGlExtractor,
   FellowproductsComExtractor: FellowproductsComExtractor,
-  BlogsAbsoluteComExtractor: BlogsAbsoluteComExtractor,
-  InessentialExtractor: InessentialExtractor
+  BlogsAbsoluteComExtractor: BlogsAbsoluteComExtractor
 });
 
 var Extractors = _Object$keys(CustomExtractors).reduce(function (acc, key) {
